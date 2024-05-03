@@ -1,0 +1,55 @@
+\chapter{Introduction}
+    \pagenumbering{arabic}
+\section{Background Introduction}
+Manga are comics or graphic novels originating from Japan. Most manga conform to a style developed in Japan in the late 19th century, and the form has a long history in earlier Japanese art. The term manga is used in Japan to refer to both comics and cartooning. Outside of Japan, the word is typically used to refer to comics originally published in this country.\\
+
+\noindent 
+Manga is a unique art form, traditionally drawn in black and white and characterised by its distinctive style. It is quite different from regular illustration \cite{li-2017-deep}due to following key points :
+
+\begin{itemize}
+    \item \textbf{Exaggerated Expressions}: Large eyes, expressive features, and dynamic body language capture emotions vividly.
+    \item \textbf{Unique Linework}: Flowing lines, hatching, and crosshatching create depth and texture.
+    \item \textbf{Screen Tones}: Dot patterns add shading, texture, and atmosphere, sometimes replacing traditional shading.
+    \item \textbf{Drawing Effects}: motion, fire and light effects, action effects
+    Open edges or boundaries: introduce colour bleeding problem
+    
+\end{itemize}
+
+\noindent The line styles, shading, and screen tones used in Manga are different from other types of non-realistic illustrations, and pose an entirely different array of challenges in colourization.
+
+\section{Motivation}
+Coloring Japanese comics from black-and-white to color is a challenging and time-consuming. This process often involves artists having to redraw certain parts or even start from scratch to add colors. This is because the original black-and-white versions were not designed with color in mind. \\ 
+
+\noindent There are existing tools and techniques that can automatically add color to images. However, these tools don’t work as well with Japanese comics due to its unique style and features that are different from other types of images, such as photo-realistic and non-photo-realistic images. Many require varying degrees of human intervention, and aren't fully automatic. \cite{shimizu2021painting,isola2018imagetoimage, 10.1007/978-3-030-72610-2_17}\\
+
+\noindent Given these challenges, our goal is to develop a new tool specifically for coloring Japanese comics. This tool will be designed to understand the unique features of Japanese comics and add color accordingly. By automating this process, we aim to make the coloring process faster and easier.\\
+
+\noindent Moreover, this tool will not only benefit the artists but also the readers. With color, readers will be able to enjoy these comics in a more engaging and immersive way.\\
+
+
+\section{Problem Definition}
+Image colorization in image processing is a complex task that involves the addition of colour to grayscale images. In the realm of realistic images, colorization is relatively straightforward due to the consistency of colours associated with objects. Convolutional Neural Networks (CNNs) trained on large datasets of paired grayscale and colour images are commonly employed for this purpose \cite{furusawa2017comicolorization, zhu2020unpaired, varga2017convolutional}. These models learn the associations between grayscale patterns and corresponding colours, making predictions based on established colour conventions. For instance, grass is typically associated with a green hue, and the sky is often coloured blue. In realistic images, these conventions provide a reliable basis for the colorization process.  Moreover, when it comes to using handcrafted algorithms for manga colorization, the results often appear flat and unappealing \cite{jiramahapokee2023inkn}\\ 
+
+\noindent But the problems with non-realistic graphics are different. Non-realistic images involve abstraction, stylization, and subjective artistic interpretation, in contrast to their realistic counterparts. In these kinds of photos, colours can be quite random and unconventional. The absence of consistency in object representations could result in ambiguity during the colouring process. The process gets more challenging by the variety of textures, brushstrokes, and compositional features. The impact of artistic trends, narrative considerations, and genres on non-realistic images requires the use of specialised techniques \cite{li-2017-deep}. While realistic image solutions can serve as a source of inspiration, it is not flexible enough to accommodate a wide range of artistic genres with deliberate alterations and artistic decisions. \cite{isola2018imagetoimage}\\
+
+\noindent Being said that, manga poses another set of problems on top of being non-realistic illustrations. 
+\begin{itemize}
+    \item Characters within a page at different panels need to have consistent colours
+    \item Different hatching, shading and screen tones needs to be coloured according to the scenario
+    \item Open and not so well defined edges can be prone to colour bleeding 
+    \item Multiple texts and text blobs in the image should be treated differently.
+\end{itemize}
+
+\section{Goals and Objectives}
+    The main objective of this project are:
+    \begin{itemize}
+         \item To automate and speed up the process of colouring manga without   human intervention.
+    \end{itemize}
+
+\section{Scope and Applications}
+
+Colorized manga is appealing to a wider audience, including people who are not familiar with Japanese culture. The following points highlight the scope and application of automatic manga colorization.
+\begin{itemize}
+    \item It can be used to color both new and existing manga series in art styles of choice based on the dataset it has been trained on.
+    \item Readers can use the system to colorize different manga according to their preference.
+\end{itemize}
